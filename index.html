@@ -290,6 +290,44 @@
     }
     .hero-desc p { color: var(--muted); font-size: 0.97rem; line-height: 1.8; }
 
+    /* ─── VISION ─── */
+    .vision { background: linear-gradient(160deg, var(--navy) 0%, #0c3460 100%); color: #fff; }
+    .vision .section-label { color: #93c5fd; }
+    .vision .section-title { color: #fff; font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 0.75rem; }
+    .vision-sub { font-size: 1.1rem; color: #bae6fd; margin-bottom: 2.5rem; font-weight: 500; }
+    .why-block {
+      max-width: 680px;
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 16px; padding: 2rem 2.25rem; margin-top: 2.5rem;
+    }
+    .why-block h3 { font-size: 1rem; font-weight: 800; color: #93c5fd; margin-bottom: 1rem; letter-spacing: 0.08em; font-family: 'Tenor Sans', serif; }
+    .why-block p { color: #e2e8f0; font-size: 0.97rem; line-height: 1.9; }
+
+    /* ─── PAIN POINTS ─── */
+    .pain { background: #fff; }
+    .pain-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+    .pain-item {
+      background: var(--surface); border: 1.5px solid var(--border); border-radius: 12px;
+      padding: 1.1rem 1.3rem; display: flex; align-items: flex-start; gap: 0.75rem;
+    }
+    .pain-q { font-size: 1.1rem; color: var(--sky-dark); font-weight: 900; flex-shrink: 0; margin-top: 0.05rem; }
+    .pain-item p { font-size: 0.93rem; color: var(--navy2); font-weight: 600; line-height: 1.55; }
+
+    /* ─── MENU（依頼できること）─── */
+    .menu { background: var(--surface); }
+    .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .menu-item {
+      background: #fff; border: 1.5px solid var(--border); border-radius: 12px;
+      padding: 1.1rem 1.25rem; display: flex; align-items: center; gap: 0.7rem;
+      transition: border-color .2s, transform .2s;
+    }
+    .menu-item:hover { border-color: var(--sky); transform: translateY(-2px); }
+    .menu-dot {
+      width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--sky), var(--sky-deep));
+    }
+    .menu-item span { font-size: 0.9rem; font-weight: 700; color: var(--navy); line-height: 1.45; }
+
     /* ─── STRENGTHS ─── */
     .strengths { background: var(--surface); }
     .strength-grid {
@@ -369,8 +407,8 @@
       AI Agent Dev
     </a>
     <nav class="nav-links">
-      <a href="#strengths" class="hide-sp">強み</a>
-      <a href="#services" class="hide-sp">サービス</a>
+      <a href="#vision" class="hide-sp">ビジョン</a>
+      <a href="#menu" class="hide-sp">依頼内容</a>
       <a href="#works" class="hide-sp">実績</a>
       <a href="#pricing" class="hide-sp">料金</a>
       <a href="#profile" class="hide-sp">プロフィール</a>
@@ -392,6 +430,59 @@
     <div class="hero-btns">
       <a href="#contact" class="btn-primary" onclick="openModal(event)">無料でお問い合わせ →</a>
       <a href="#works" class="btn-secondary">制作実績を見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section class="vision" id="vision">
+  <div class="container">
+    <div class="section-label">Vision</div>
+    <h2 class="section-title">AIを、実務で使える<br>パートナーにする</h2>
+    <p class="vision-sub">AIと業務改善・自動化を組み合わせ、日々の作業時間を減らす</p>
+    <div class="why-block">
+      <h3>なぜやるのか</h3>
+      <p>
+        AIを導入すること自体ではなく、<br>
+        実際の業務で使い続けられることを重視しています。<br><br>
+        実務に合わせて整理・改善しながら、<br>
+        AI活用と業務自動化を支援します。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="pain" id="pain">
+  <div class="container">
+    <div class="section-label">Problems</div>
+    <h2 class="section-title">こんな悩みを解決します</h2>
+    <p class="section-desc">個人事業主・フリーランス・小規模事業者の方からよくいただく声です。</p>
+    <div class="pain-grid">
+      <div class="pain-item"><span class="pain-q">?</span><p>自分の業務にAIが関係あるかわからない</p></div>
+      <div class="pain-item"><span class="pain-q">?</span><p>AIを何に使えばいいかわからない</p></div>
+      <div class="pain-item"><span class="pain-q">?</span><p>AIを試したが活用できていない</p></div>
+      <div class="pain-item"><span class="pain-q">?</span><p>毎日の定型作業を減らしたい</p></div>
+      <div class="pain-item"><span class="pain-q">?</span><p>情報整理に時間がかかっている</p></div>
+      <div class="pain-item"><span class="pain-q">?</span><p>AI導入の費用が高い</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="container">
+    <div class="section-label">Menu</div>
+    <h2 class="section-title">依頼できること</h2>
+    <p class="section-desc">一部だけの相談でも、まるごと任せていただくことも可能です。</p>
+    <div class="menu-grid">
+      <div class="menu-item"><span class="menu-dot"></span><span>AI活用相談</span></div>
+      <div class="menu-item"><span class="menu-dot"></span><span>業務改善相談</span></div>
+      <div class="menu-item"><span class="menu-dot"></span><span>AIを活用した簡易ツール開発</span></div>
+      <div class="menu-item"><span class="menu-dot"></span><span>自動化支援</span></div>
+      <div class="menu-item"><span class="menu-dot"></span><span>ChatGPT / Claude / GAS活用支援</span></div>
+      <div class="menu-item"><span class="menu-dot"></span><span>プロンプト設計</span></div>
+      <div class="menu-item"><span class="menu-dot"></span><span>情報整理支援</span></div>
     </div>
   </div>
 </section>
