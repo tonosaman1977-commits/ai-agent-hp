@@ -243,10 +243,9 @@
     }
     .avatar {
       width: 120px; height: 120px; border-radius: 50%; flex-shrink: 0;
-      background: linear-gradient(135deg, var(--sky), var(--sky-deep));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 3rem; color: #fff;
+      object-fit: cover; object-position: center top;
       box-shadow: 0 8px 32px rgba(14,165,233,0.3);
+      border: 3px solid var(--border);
     }
     .profile-info { flex: 1; min-width: 200px; }
     .profile-role { font-size: 0.78rem; font-weight: 800; color: var(--sky-dark); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
@@ -291,14 +290,14 @@
     .hero-desc p { color: var(--muted); font-size: 0.97rem; line-height: 1.8; }
 
     /* ─── VISION ─── */
-    .vision { background: linear-gradient(160deg, var(--navy) 0%, #0c3460 100%); color: #fff; }
+    .vision { background: linear-gradient(160deg, var(--navy) 0%, #0c3460 100%); color: #fff; text-align: center; }
     .vision .section-label { color: #93c5fd; }
     .vision .section-title { color: #fff; font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 0.75rem; }
     .vision-sub { font-size: 1.1rem; color: #bae6fd; margin-bottom: 2.5rem; font-weight: 500; }
     .why-block {
-      max-width: 680px;
+      max-width: 680px; margin: 2.5rem auto 0; text-align: left;
       background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 16px; padding: 2rem 2.25rem; margin-top: 2.5rem;
+      border-radius: 16px; padding: 2rem 2.25rem;
     }
     .why-block h3 { font-size: 1rem; font-weight: 800; color: #93c5fd; margin-bottom: 1rem; letter-spacing: 0.08em; font-family: 'Tenor Sans', serif; }
     .why-block p { color: #e2e8f0; font-size: 0.97rem; line-height: 1.9; }
@@ -729,7 +728,7 @@
     <div class="section-label">Profile</div>
     <h2 class="section-title">開発者紹介</h2>
     <div class="profile-card">
-      <div class="avatar">👨‍💻</div>
+      <img src="images/profile.png" alt="南宏" class="avatar" />
       <div class="profile-info">
         <div class="profile-role">AI App Designer</div>
         <div class="profile-name">南　宏</div>
